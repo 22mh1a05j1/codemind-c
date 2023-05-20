@@ -1,30 +1,33 @@
-#include<stdio.h>
-#include<math.h>
-int main()
-{
-    int n,a,r,rv=0,rem,rev=0;
-    scanf("%d%d",&n,&a);
-    int p=pow(10,a);
-    int n1=n%p;
-    while(n!=0)
-    {
-        r=n%10;
-        rv=rv*10+r;
-        n=n/10;
-    }
-    int p2=rv%p;
-    while(p2!=0)
-    {
-        rem=p2%10;
-        rev=rev*10+rem;
-        p2=p2/10;
-    }
-    if(rev>n1)
-    {
-        printf("%d",rev-n1);
-    }
-    else
-    {
-        printf("%d",n1-rev);
-    }
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int absoluteDifference(int n, int x) {
+    // Convert the number N to a string for easy manipulation
+    char n_str[20];  // Assuming N will not exceed 20 digits
+    sprintf(n_str, "%d", n);
+    
+    // Extract the first X digits
+    int first_x = atoi(strndup(n_str, x));
+    
+    // Extract the last X digits
+    int len = strlen(n_str);
+    int last_x = atoi(strndup(n_str + len - x, x));
+    
+    // Calculate the absolute difference
+    int diff = abs(first_x - last_x);
+    
+    return diff;
+}
+
+int main() {
+    int n, x;
+    scanf("%d %d", &n, &x);
+    
+    // Calculate and print the absolute difference
+    int result = absoluteDifference(n, x);
+    printf("%d
+", result);
+    
+    return 0;
 }
