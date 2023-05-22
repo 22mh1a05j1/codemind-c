@@ -11,8 +11,8 @@ int main()
             c++;
         }
     }
-    if(c==0)
-    {
-        printf("-1");
-    }
+if(c==0)
+{
+    printf("-1");
+}
 }
