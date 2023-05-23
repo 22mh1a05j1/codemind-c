@@ -20,7 +20,7 @@ int prime(int n)
 }
 int pal(int n)
 {
-    int t=n,r,rv=0;
+    int r,rv=0,t=n;
     while(n!=0)
     {
         r=n%10;
@@ -42,11 +42,10 @@ int main()
     scanf("%d",&n);
     for(int i=n+1;;i++)
     {
-        if(prime(i)&&pal(i))
+        if(pal(i)&&prime(i))
         {
             printf("%d",i);
             break;
         }
-        
     }
-}
+} 
