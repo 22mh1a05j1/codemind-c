@@ -1,24 +1,38 @@
 #include<stdio.h>
+int self(int i)
+{
+    int t=i,r,c=0,count=0;
+    while(i!=0)
+    {
+     r=i%10;
+     count++;
+     if(r>0)
+     {
+     if(t%r==0)
+     {
+         c++;
+     }
+     }
+     i=i/10;
+    }
+    if(c==count)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
 int main()
 {
-    int m,n;
-    scanf("%d%d",&m,&n);
-    for(int i=m;i<=n;i++)
+    int a,b;
+    scanf("%d%d",&a,&b);
+    for(int i=a;i<=b;i++)
     {
-        int x=i;
-        int dig=0,count=0;
-        while(x)
+        if(self(i))
         {
-            dig++;
-            if((x%10)==0)
-            break;
-            if(i%(x%10)==0)
-            count++;
-            x/=10;
+            printf("%d ",i);
         }
-    if(dig==count)
-      {
-        printf("%d ",i);
-   }
-   }
+    }
 }
