@@ -1,15 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,i;
+    int a,b,hcf;
     scanf("%d%d",&a,&b);
-    int max=a>b ? a:b;
-    for(i=max; ; i+=max)
+    for(int i=1;i<=a && i<=b;i++)
     {
-        if(i%a==0 && i%b==0)
+        if(a%i==0 && b%i==0)
         {
-            printf("%d",i);
-            break;
+            hcf=i;
         }
     }
+    int lcm=(a*b)/hcf;
+    printf("%d",lcm);
 }
