@@ -1,27 +1,27 @@
 #include<stdio.h>
 int main()
 {
-    int a,fc=0,c=0,count=0,r;
-    scanf("%d",&a);
-    while(a!=0)
+    int n,c=0,rem,ec=0,oc=0;
+    scanf("%d",&n);
+    while(n>0)
     {
-        r=a%10;
-        fc++;
-        if(r%2==0)
+        rem=n%10;
+        c=c+1;
+        if(rem%2==0)
         {
-            c++;
+            ec=ec+1;
         }
-        else
+        else if(rem%2!=0)
         {
-            count++;
+            oc=oc+1;
         }
-        a=a/10;
+        n=n/10;
     }
-    if(c==fc)
+    if(c==ec)
     {
         printf("Even");
     }
-    else if(count==fc)
+    else if(c==oc)
     {
         printf("Odd");
     }
