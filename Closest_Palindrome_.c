@@ -1,15 +1,15 @@
 #include<stdio.h>
 int pal(int n)
 {
-    int t=n;
-    int r,rv=0;
-    while(n>0)
+    int r,rv=0,t=n;
+    while(n!=0)
     {
         r=n%10;
         rv=rv*10+r;
         n=n/10;
     }
-    if(rv==t){
+    if(rv==t)
+    {
         return 1;
     }
     else
@@ -29,7 +29,8 @@ int main()
             break;
         }
     }
-    for(int i=n-1;;i--){
+    for(int i=n-1;;i--)
+    {
         if(pal(i))
         {
             b=i;
@@ -46,7 +47,9 @@ int main()
     {
         printf("%d",b);
     }
-    else if(d1==d2){
+    else
+    {
         printf("%d %d",b,f);
     }
+    
 }
