@@ -1,15 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,c;
     scanf("%d",&n);
-    int a=0,b=1,c;
-    printf("%d %d ",a,b);
-    for(int i=3;i<=n;i++)
+    int a=0,b=1;
+    for(int i=1;i<=n;i++)
     {
+        
         c=a+b;
-        printf("%d ",c);
+        printf("%d ",a);
         a=b;
         b=c;
+        
     }
 }
