@@ -13,16 +13,16 @@ int main()
     int sq2=rev*rev;
     while(sq2!=0)
     {
-            rem2=sq2%10;
-            rev2=rev2*10+rem2;
-            sq2=sq2/10;
-        }
-        if(rev2==sq)
-        {
-            printf("True");
-        }
-        else
-        {
-            printf("False");
-        }
+        rem2=sq2%10;
+        rev2=rev2*10+rem2;
+        sq2=sq2/10;
     }
+    if(rev2==sq)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
