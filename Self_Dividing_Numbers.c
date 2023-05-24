@@ -1,21 +1,22 @@
 #include<stdio.h>
 int self(int i)
 {
-    int t=i,r,c=0,count=0;
+    int c=0,r,r1,cnt=0;
+    int t=i;
     while(i!=0)
     {
-     r=i%10;
-     count++;
-     if(r>0)
-     {
-     if(t%r==0)
-     {
-         c++;
-     }
-     }
-     i=i/10;
+        r=i%10;
+        c++;
+        if(r>0)
+        {
+            if(t%r==0)
+            {
+                cnt++;
+            }
+        }
+        i=i/10;
     }
-    if(c==count)
+    if(c==cnt)
     {
         return 1;
     }
@@ -26,7 +27,7 @@ int self(int i)
 }
 int main()
 {
-    int a,b;
+    int a,b,q;
     scanf("%d%d",&a,&b);
     for(int i=a;i<=b;i++)
     {
