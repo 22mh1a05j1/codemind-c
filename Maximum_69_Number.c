@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n;
-    int r,c=0,i=0;
+    int n,r,c=0;
     scanf("%d",&n);
     int t=n;
     while(n!=0)
@@ -11,11 +10,11 @@ int main()
         c++;
         n=n/10;
     }
-    int a[c];
+    int a[c],i=0;
     while(t!=0)
     {
-        int rem=t%10;
-        a[i]=rem;
+        r=t%10;
+        a[i]=r;
         i++;
         t=t/10;
     }
@@ -30,5 +29,6 @@ int main()
     for(int i=c-1;i>=0;i--)
     {
         printf("%d",a[i]);
-}
+    }
+    
 }
