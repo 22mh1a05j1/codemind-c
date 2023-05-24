@@ -1,11 +1,11 @@
 #include<stdio.h>
 int main()
 {
-    int n1,n2,hcf;
-    scanf("%d%d",&n1,&n2);
-    for(int i=1;i<=n1&&i<=n2;i++)
+    int a,b,hcf;
+    scanf("%d%d",&a,&b);
+    for (int i=1;i<=a&&i<=b;i++)
     {
-        if(n1%i==0&&n2%i==0)
+        if(a%i==0&&b%i==0)
         {
             hcf=i;
         }
