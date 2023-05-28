@@ -1,18 +1,28 @@
 #include<stdio.h>
+int power(int a,int b)
+{
+    int pr=1;
+    for(int i=1;i<=b;i++)
+    {
+        pr=pr*a;
+    }
+    return pr;
+}
 int main()
 {
-    int n,c=0;
+    int n,s=0;
     scanf("%d",&n);
     int a[n];
+    int t=n-1;
     for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
-        if(a[i]==0||a[i]==1)
+        if(a[i]==1||a[i]==0)
         {
-            c++;
+            s++;
         }
     }
-    if(c==n)
+    if(s==n)
     {
         printf("True");
     }
